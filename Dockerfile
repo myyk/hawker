@@ -9,4 +9,4 @@ WORKDIR $PDF_DIR
 
 ADD successful-tenders $PDF_DIR/
 
-ENTRYPOINT find $PDF_DIR/ | xargs -L 1 -t pdftotext
+ENTRYPOINT find $PDF_DIR/ | xargs -L 1 -t pdftotext; cp -v $PDF_DIR/*.txt /output/

@@ -21,7 +21,4 @@ Run container:
     #docker volume create my-vol
 
     docker build -t xpdf .
-    docker run -it --rm --name my-xpdf -v /Users/myyk/workspace/hawker-stalls/txt:/output xpdf
-
-	find /pdf | xargs -L 1 -t pdftotext
-    cp /pdf/*.txt /output/
+    docker run -it --rm --name my-xpdf -v /Users/myyk/workspace/hawker/txt:/output xpdf
